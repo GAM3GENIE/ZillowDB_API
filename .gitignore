@@ -1,3 +1,10 @@
+# Ignoring important files
+.cache
+node_modules
+public
+.env.*
+.env
+
 # Logs
 logs
 *.log
