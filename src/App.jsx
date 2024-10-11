@@ -3,6 +3,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import HomePage from './pages/HomePage'
 import MainLayout from './layouts/MainLayout'
 import NotFoundPage from './pages/NotFoundPage'
+import PropertyListings from './components/PropertyListings'
 
 
 
@@ -12,6 +13,7 @@ function App() {
       createRoutesFromElements(
         <Route path='/' element={ <MainLayout />} >
           <Route index element={ <HomePage /> } />
+          <Route path='/propertylistings' element={ <PropertyListings /> } />
           <Route path='*' element={ <NotFoundPage /> } />
         </Route>
       )

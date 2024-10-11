@@ -16,11 +16,11 @@ const NavBar = () => {
                     {/* <!-- Logo --> */}
                         <NavLink className="flex flex-shrink-0 items-center mr-4" to="/">
                             <img
-                            className="h-10 w-auto"
+                            className="h-5"
                             src={ logo }
                             alt="Zillow Logo"
                             />
-                            <span className="md:block text-blue-600 text-2xl font-bold ml-2">
+                            <span className="md:block text-blue-600 text-3xl font-bold ml-2">
                                 ZillowDB.info
                             </span>
                         </NavLink>
@@ -33,7 +33,7 @@ const NavBar = () => {
                                     Home
                             </NavLink>
                             <NavLink
-                                to="/search"
+                                to="/propertylistings"
                                 className={ linkclassName }
                                 >
                                     Search
