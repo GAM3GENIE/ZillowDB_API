@@ -1,43 +1,27 @@
 import React, { useState } from 'react'
-import getPulicData from '../api/PdApiClient'
 
 
-const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [search, setSearch] = useState([]);
+const SearchBar = ({ onSearch }) => {
+    const [inputValue, setInputValue] = useState('')
 
-    const handleSearch = async () => {
-        try {
-            const response = await getPulicData(searchTerm);
-            setSearch(response.data);
-            //console.log(response.data);
-        } catch (error) {
-            console.log(error)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (inputValue.trim() !== ''){
+            onSearch(inputValue)
         }
-
-        
-
     }
-
-    const propInfo = search.map((item) => 
-        <li>{item.address.full}</li>
-    )
-
+    
   return (
     <>
-    <div>
-        <input 
-        type="text" 
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder='City, State or Zipcode'
+       <form onSubmit={handleSubmit}>
+        <input
+            type='text'
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder='Enter City, State, or Zipcode'
         />
-        <button onClick={handleSearch}>Search</button>
-        {/* Display Search results hear */}
-        <ul>
-            {propInfo}
-        </ul>
-    </div>
+        <button type='submit'>Search</button>        
+       </form>
     </>
   )
 }

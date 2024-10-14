@@ -36,7 +36,7 @@ const NavBar = () => {
                                 to="/propertylistings"
                                 className={ linkclassName }
                                 >
-                                    Search
+                                    Property Listings
                             </NavLink>
                             {/* <NavLink
                                 to="/add-job"
