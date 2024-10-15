@@ -8,11 +8,11 @@ import SearchBar from '../components/SearchBar'
 
 
 
-const HomePage = ({ onSearch, results }) => {
+const HomePage = ({ handleSearch, results }) => {
   return (
     <>
         <Hero />
-        <SearchBar onSearch={handleSearch} results={results} />
+        <SearchBar handleSearch={handleSearch} results={results} />
         <Footer />
     </>
   )

@@ -33,8 +33,18 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={ <MainLayout />} >
-        <Route index element={ <HomePage onSearch={handleSearch} results={results} loading={loading} /> } />
-        <Route path='/propertylistingpage' element={ <PropertyListingPage onSearch={handleSearch} results={results} loading={loading} /> } />
+        <Route index element={ 
+          <HomePage 
+          handleSearch={handleSearch} 
+          results={results} 
+          loading={loading} 
+          /> } />
+        <Route path='/propertylistingpage' element={ 
+          <PropertyListingPage 
+          handleSearch={handleSearch} 
+          results={results} 
+          loading={loading} 
+          /> } />
         <Route path='*' element={ <NotFoundPage /> } />
       </Route>
     )

@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ handleSearch }) => {
     const [inputValue, setInputValue] = useState('')
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         if (inputValue.trim() !== ''){
-            onSearch(inputValue)
-            useNavigate('/propertylistingpage')
+            handleSearch(inputValue)
+            navigate('/propertylistingpage')
             setInputValue('')
         }
     }
