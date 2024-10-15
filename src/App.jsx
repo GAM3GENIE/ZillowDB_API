@@ -34,16 +34,14 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={ <MainLayout />} >
         <Route index element={ 
-          <HomePage 
-          handleSearch={handleSearch} 
-          results={results} 
-          loading={loading} 
-          /> } />
+          <HomePage handleSearch={handleSearch} /> 
+          } />
         <Route path='/propertylistingpage' element={ 
           <PropertyListingPage 
           handleSearch={handleSearch} 
           results={results} 
           loading={loading} 
+          error={error}
           /> } />
         <Route path='*' element={ <NotFoundPage /> } />
       </Route>
