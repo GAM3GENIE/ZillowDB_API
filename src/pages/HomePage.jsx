@@ -1,18 +1,18 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import SearchBar from '../components/SearchBar'
 import Footer from '../components/footer'
+import SearchBar from '../components/SearchBar'
 
 
 
 
 
 
-const HomePage = () => {
+const HomePage = ({ onSearch, results }) => {
   return (
     <>
         <Hero />
-        <SearchBar />
+        <SearchBar onSearch={handleSearch} results={results} />
         <Footer />
     </>
   )

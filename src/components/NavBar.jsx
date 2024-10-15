@@ -33,7 +33,7 @@ const NavBar = () => {
                                     Home
                             </NavLink>
                             <NavLink
-                                to="/propertylistings"
+                                to="/propertylistingpage"
                                 className={ linkclassName }
                                 >
                                     Property Listings

@@ -13,8 +13,6 @@ const PropertyListings = ({ results }) => {
         ) : (
             <p>No results found.</p>
         )}
-        {loading && <p>Loading...</p>}
-        {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   )
 }
