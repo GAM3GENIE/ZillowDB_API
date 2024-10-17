@@ -14,8 +14,8 @@ const footer = () => {
                         <img src={ logo } alt="Zillow Logo" />
                     </Link>
                     <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
-                        <li><Link to="/" className="text-gray-800 hover:text-gray-900">Home</Link></li>
-                        <li><Link to="/propertylistingpage" className=" text-gray-800 hover:text-gray-900">Property Listings</Link></li>
+                        <li><Link to="/" className="text-gray-800 hover:text-blue-600">Home</Link></li>
+                        <li><Link to="/propertylistingpage" className=" text-gray-800 hover:text-blue-600">Property Listings</Link></li>
                         {/* <li><a href="#" className=" text-gray-800 hover:text-gray-900">Resources</a></li>
                         <li><a href="#" className=" text-gray-800 hover:text-gray-900">Blogs</a></li>
                         <li><a href="#" className=" text-gray-800 hover:text-gray-900">Support</a></li> */}

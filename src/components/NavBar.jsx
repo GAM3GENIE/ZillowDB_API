@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <>
-        <nav className="bg-white border-b border-blue-600">
+        <nav className="bg-white">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div
@@ -20,9 +20,9 @@ const NavBar = () => {
                             src={ logo }
                             alt="Zillow Logo"
                             />
-                            <span className="md:block text-blue-600 text-3xl font-bold ml-2">
+                            {/* <span className="md:block text-blue-600 text-3xl font-bold ml-2">
                                 ZillowDB.info
-                            </span>
+                            </span> */}
                         </NavLink>
                         <div className="md:ml-auto">
                             <div className="flex space-x-2">

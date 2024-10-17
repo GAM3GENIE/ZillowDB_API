@@ -7,6 +7,8 @@ import PropertyListingPage from './pages/PropertyListingPage'
 import apiClient from './api/PdApiClient'
 
 
+
+
 function App() {
   const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
@@ -22,7 +24,6 @@ function App() {
     try {
         const response = await apiClient.get(`https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=${apiKey}&offset=0&limit=200&near=${searchQuery}`)
         setResults(response.data.bundle)
-        //console.log(response.data.bundle)
     }catch (error) {
         console.log('Error fetching data', error)
     }finally {
