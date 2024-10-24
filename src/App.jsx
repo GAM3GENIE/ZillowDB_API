@@ -23,7 +23,7 @@ function App() {
     setQuery(searchQuery)
     try {
         const response = await apiClient.get(`https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=${apiKey}&offset=0&limit=200&near=${searchQuery}`)
-        setResults(response.data.bundle)
+        setResults(response.data.bundle)      
     }catch (error) {
         console.log('Error fetching data', error)
     }finally {

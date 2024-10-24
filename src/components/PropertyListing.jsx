@@ -2,14 +2,14 @@ import React from 'react'
 import { FaMapMarker } from 'react-icons/fa'
 import { SiZillow } from 'react-icons/si'
 
-const PropertyListing = ({ listings, item, area }) => {
+const PropertyListing = ({ listings, buildings, area }) => {
 
   return (
     <>
         <div className="bg-white rounded-xl shadow-md relative">
             <div className="p-4">
                 <div className="mb-6">
-                    <div className="text-gray-600 my-2">{ listings.landUseDescription }</div>
+                    <div className="text-gray-600">{ listings.landUseDescription }</div>
                     <h3 className="text-xl font-bold">
                         { listings.address.house } { listings.address.street } { listings.address.streetSuffix }
                     </h3>
@@ -18,7 +18,7 @@ const PropertyListing = ({ listings, item, area }) => {
                 { listings.county }
                 </div>
                 <h3 className="text-blue-600 mb-2">
-                    {item.bedrooms} Bed | {item.fullBaths} Bath | {area.areaSquareFeet} SqFt
+                    {buildings.bedrooms} Bed | {buildings.fullBaths} Bath | {area.areaSquareFeet} SqFt
                 </h3>
                 <div className="border border-gray-100 mb-5"></div>
                 <div className="flex flex-col lg:flex-row justify-between mb-4">
