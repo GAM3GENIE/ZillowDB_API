@@ -1,13 +1,16 @@
 import axios from 'axios'
 
-const apiKey = import.meta.env.VITE_API_KEY
 
 // Client for Zillow's Publc Data API call
 const apiClient = axios.create({
-    baseUrl: `https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=${apiKey}&offset=0&limit=500&near=`,
+    baseURL: `https://api.bridgedataoutput.com/api/v2/pub`,
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json'  
     }
 })
 
-export default apiClient
+const _get = (url) => {
+    return apiClient.get(url);
+  };
+
+export default _get

@@ -21,7 +21,7 @@ const PropertyListing = ({ listings, buildings, area }) => {
                 { listings.county }
                 </div>
                 <ul className="text-blue-600 mb-2">
-                    <li style={{ display: (buildings.bedrooms && buildings.bedrooms === 0) ? 'inline' : 'none'}}>
+                    <li style={{ display: (buildings.bedrooms === null || buildings.bedrooms === 0) ? 'none' : 'inline'}}>
                         <b>{buildings.bedrooms}</b>
                         <abb> bds | </abb>
                     </li>

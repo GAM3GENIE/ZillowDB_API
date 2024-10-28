@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import MainLayout from './layouts/MainLayout'
 import NotFoundPage from './pages/NotFoundPage'
 import PropertyListingPage from './pages/PropertyListingPage'
-import apiClient from './api/PdApiClient'
+import _get from './api/PdApiClient'
 
 
 
@@ -22,7 +22,7 @@ function App() {
     setError('')
     setQuery(searchQuery)
     try {
-        const response = await apiClient.get(`https://api.bridgedataoutput.com/api/v2/pub/parcels?access_token=${apiKey}&offset=0&limit=200&near=${searchQuery}`)
+        const response = await _get(`/parcels?access_token=${apiKey}&offset=0&limit=200&near=${searchQuery}`)
         setResults(response.data.bundle)      
     }catch (error) {
         console.log('Error fetching data', error)
